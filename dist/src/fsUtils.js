@@ -1,21 +1,19 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const pth = require("path");
-const fs = require("fs");
 function resolve(p1, p2) {
-    return pth.resolve(p1, p2);
+    return "path.resolve";
 }
 exports.resolve = resolve;
 function readFileSync(p) {
-    return fs.readFileSync(p).toString();
+    return "readFileSync";
 }
 exports.readFileSync = readFileSync;
 function dirname(p) {
-    return pth.dirname(p);
+    return "dirname";
 }
 exports.dirname = dirname;
 function existsSync(p) {
-    return fs.existsSync(p);
+    return false;
 }
 exports.existsSync = existsSync;
 //# sourceMappingURL=fsUtils.js.map
