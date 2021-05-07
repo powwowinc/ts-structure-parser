@@ -78,7 +78,7 @@ export function parseStruct(content: string, modules: {[path: string]: Module}, 
                 if (y.kind === ts.SyntaxKind.StringLiteral) {
                     var localPath = y.getText().substring( 1, y.getText().length - 1);
                     if ( localPath[0] === "." ) {
-                        var localP = fsUtil.resolve( fsUtil.dirname( mpth) + "/", localPath).split( process.cwd()).join(".");
+                        var localP = fsUtil.resolve(fsUtil.dirname(mpth) + "/", localPath);
                         localAbsPath = localP.split(pth.sep);
                         localAbsPathString = localP;
                     } else {
